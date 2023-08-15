@@ -8,4 +8,4 @@ INSERT INTO todo (ID, USERNAME, DESCRIPTION, TARGET_DATE, DONE)
 VALUES(10003, 'in28minutes', 'Get DevOps Certified', CURRENT_DATE(), false);
 
 INSERT INTO todo (ID, USERNAME, DESCRIPTION, TARGET_DATE, DONE)
-VALUES(10004, 'in28minutes', 'Get GCP Certified', CURRENT_DATE(), false);hjh
+VALUES(10004, 'in28minutes', 'Get GCP Certified', CURRENT_DATE(), false);hjhsdf
