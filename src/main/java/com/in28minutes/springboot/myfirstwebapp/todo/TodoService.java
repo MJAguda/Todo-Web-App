@@ -20,9 +20,9 @@ public class TodoService {
 
     // HardCoded todos
     static{
-        todos.add(new Todo(++todosCount, "in28minutes", "Get AWS Certified", LocalDate.now().plusYears(1), false));
-        todos.add(new Todo(++todosCount, "in28minutes", "Learn DevOps", LocalDate.now().plusYears(2), false));
-        todos.add(new Todo(++todosCount, "in28minutes", "Learn Full Stack Development", LocalDate.now().plusYears(3), false));
+        todos.add(new Todo(++todosCount, "in28minutes", "Get AWS Certified 1", LocalDate.now().plusYears(1), false));
+        todos.add(new Todo(++todosCount, "in28minutes", "Learn DevOps 1", LocalDate.now().plusYears(2), false));
+        todos.add(new Todo(++todosCount, "in28minutes", "Learn Full Stack Development 1", LocalDate.now().plusYears(3), false));
     }
 
     // Method to findByUsername with String username input parameter

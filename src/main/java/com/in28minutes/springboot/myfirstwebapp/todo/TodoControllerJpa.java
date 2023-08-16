@@ -15,23 +15,31 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jakarta.validation.Valid;
 
-//@Controller
+@Controller
 @SessionAttributes("name")
-public class TodoController {
-    
+public class TodoControllerJpa {
+
+    //Autowire
+    public TodoControllerJpa(TodoService todoService, TodoRepository todoRepository){
+        super();
+        this.todoService = todoService;
+        this.todoRepository = todoRepository;
+
+    }
+
     // Autoweiring the class TodoService
     private TodoService todoService;
 
-    public TodoController(TodoService todoService){
-        super();
-        this.todoService = todoService;
-    }
+    private TodoRepository todoRepository;
 
     // Mapping for localhost:8080/list-todos
     @RequestMapping("list-todos")
     public String listAllTodos(ModelMap model){
         String username = getLoggedInUsername(model);
-        List<Todo> todos = todoService.findByUsername(username);
+
+        //todoRepository.
+
+        List<Todo> todos = todoRepository.findByUsername(username);
         model.addAttribute("todos", todos);
         
         return "listTodos";
