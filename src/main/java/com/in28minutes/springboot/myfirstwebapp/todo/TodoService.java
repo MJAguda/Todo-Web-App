@@ -55,7 +55,7 @@ public class TodoService {
         return todo;
     }
 
-    public void udpateTodo(@Valid Todo todo) {
+    public void updateTodo(@Valid Todo todo) {
         deleteById(todo.getId());
         todos.add(todo);
     }

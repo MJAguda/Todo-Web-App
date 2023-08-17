@@ -102,7 +102,7 @@ public class TodoControllerJpa {
 
         String username = getLoggedInUsername(model);
         todo.setUsername(username); 
-        // todoService.udpateTodo(todo);
+        //todoService.updateTodo(todo);
         todoRepository.save(todo);
         return "redirect:list-todos"; // redirect to the list-todos link
     }
