@@ -92,7 +92,7 @@ public class TodoController {
 
         String username = getLoggedInUsername(model);
         todo.setUsername(username); 
-        todoService.udpateTodo(todo);
+        todoService.updateTodo(todo);
         return "redirect:list-todos"; // redirect to the list-todos link
     }
 }
