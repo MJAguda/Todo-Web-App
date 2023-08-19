@@ -21,6 +21,7 @@
                     <td>${todo.done}</td>
                     <td> <a  href="delete-todo?id=${todo.id}" class="btn btn-warning">Delete</a> </td>
                     <td> <a  href="update-todo?id=${todo.id}" class="btn btn-success">Update</a> </td>
+                    <td> <a  href="done-todo?id=${todo.id}" class="btn btn-danger">Done</a> </td>
                 </tr>
             </c:forEach>
         </tbody>

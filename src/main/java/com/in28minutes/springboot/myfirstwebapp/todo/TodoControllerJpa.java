@@ -106,4 +106,18 @@ public class TodoControllerJpa {
         todoRepository.save(todo);
         return "redirect:list-todos"; // redirect to the list-todos link
     }
+
+    // Mapping to make a todo Done in POST
+    @RequestMapping(value="done-todo", method = RequestMethod.GET)
+    public String toggleDoneTodo(@RequestParam int id) {
+        
+        Todo todo = todoRepository.findById(id).orElse(null);
+
+        if (todo != null) {
+            boolean newDoneStatus = !todo.isDone(); // Toggle the "done" status
+            todo.setDone(newDoneStatus);
+            todoRepository.save(todo);
+        }
+        return "redirect:list-todos"; // Redirect to the list-todos link
+    }
 }
